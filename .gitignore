@@ -1,0 +1,7 @@
+build
+build-*
+*.user
+*.autosave
+cmake-build-debug/
+.idea/
+.vs/
