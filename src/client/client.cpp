@@ -1,6 +1,8 @@
 #include "client.h"
 
 bool Client::connect(const QString &host, uint16_t port) {
+
+    qDebug() << "Connecting ...";
     m_socket.connectToHost(host,port);
 
     if (!m_socket.waitForConnected(5000)) {
