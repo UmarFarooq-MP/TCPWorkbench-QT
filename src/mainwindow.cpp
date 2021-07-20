@@ -6,16 +6,24 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(ui->pushButtonConnectClient,&QPushButton::clicked,this,&MainWindow::connectClient);
+    connect(ui->pushButtonConnectClient,&QPushButton::clicked,this,&MainWindow::connectOrDisconnectClient);
 }
 
-void MainWindow::connectClient() {
+void MainWindow::connectOrDisconnectClient() {
 
-    qDebug() << ui->lineEditHostClient->text();
-    m_client.connect(ui->lineEditHostClient->text(),ui->lineEditPortClient->text().toInt());
-
+    if (ui->pushButtonConnectClient->text() == "Connect"){
+        m_client.connect(ui->lineEditHostClient->text(),ui->lineEditPortClient->text().toInt());
+        ui->pushButtonConnectClient->setText("Disconnect");
+    }else {
+        m_client.disconnect();
+        ui->pushButtonConnectClient->setText("Connect");
+    }
 }
-void MainWindow::connectServer() {}
+
+
+void MainWindow::connectOrDisconnectServer() {}
+
+
 
 
 MainWindow::~MainWindow()

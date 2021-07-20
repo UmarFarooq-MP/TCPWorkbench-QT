@@ -15,8 +15,11 @@ class MainWindow : public QMainWindow
     Client m_client;
 public:
     MainWindow(QWidget *parent = nullptr);
-    void connectClient();
-    void connectServer();
+
+    void connectOrDisconnectClient();
+    void connectOrDisconnectServer();
+
+
     ~MainWindow();
 
 private:
