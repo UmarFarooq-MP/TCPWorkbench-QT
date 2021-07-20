@@ -16,5 +16,3 @@ bool Client::connect(const QString &host, uint16_t port) {
 void Client::disconnect() {
     m_socket.close();
 }
-
-
