@@ -1,7 +1,8 @@
-#include <QTcpSocket>
+#include <QTcpServer>
 #include <QString>
+#include <QTcpSocket>
 
-class Server {
+class Server: public QTcpServer {
 
     QTcpSocket m_socket;
 
