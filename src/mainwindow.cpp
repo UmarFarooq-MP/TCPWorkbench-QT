@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(ui->pushButtonConnectClient,&QPushButton::clicked,this,&MainWindow::connectOrDisconnectClient);
+    connect(ui->pushButtonListen,&QPushButton::clicked,this,&MainWindow::connectOrDisconnectServer);
 }
 
 void MainWindow::connectOrDisconnectClient() {
@@ -21,7 +22,15 @@ void MainWindow::connectOrDisconnectClient() {
 }
 
 
-void MainWindow::connectOrDisconnectServer() {}
+void MainWindow::connectOrDisconnectServer() {
+    if (ui->pushButtonListen->text() == "Listen") {
+        m_server.listen(ui->lineEditPort->text().toInt());
+        ui->pushButtonListen->setText("Stop");
+    }else {
+        ui->pushButtonListen->setText("Listen");
+        m_server.close();
+    }
+}
 
 
 

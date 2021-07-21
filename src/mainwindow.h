@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "client/client.h"
+#include "server/server.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -13,6 +14,8 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
     Client m_client;
+    Server m_server;
+
 public:
     MainWindow(QWidget *parent = nullptr);
 

@@ -4,12 +4,9 @@
 
 class Server: public QTcpServer {
 
-    QTcpSocket m_socket;
-
+    QTcpServer m_server;
 public:
-    Server(const QString &IP, const int port);
-    void connect();
-    void disconnect();
-    ~Server();
-
+    Server() = default;
+    void listen(const uint16_t port);
+    void stopListening();
 };

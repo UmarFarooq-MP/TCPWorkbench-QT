@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabServer">
        <attribute name="title">
@@ -27,7 +27,7 @@
        <widget class="QFrame" name="frame">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>10</y>
           <width>491</width>
           <height>91</height>
@@ -39,24 +39,11 @@
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLabel" name="label">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>47</width>
-           <height>13</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Server:</string>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_2">
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>40</y>
+           <y>10</y>
            <width>47</width>
            <height>13</height>
           </rect>
@@ -65,69 +52,33 @@
           <string>Port:</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEditServer">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>10</y>
-           <width>141</width>
-           <height>21</height>
-          </rect>
-         </property>
-        </widget>
         <widget class="QLineEdit" name="lineEditPort">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>40</y>
-           <width>141</width>
-           <height>21</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton">
-         <property name="geometry">
-          <rect>
-           <x>200</x>
+           <x>40</x>
            <y>10</y>
-           <width>21</width>
+           <width>211</width>
            <height>21</height>
           </rect>
          </property>
-         <property name="text">
-          <string>...</string>
-         </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButtonListen">
          <property name="geometry">
           <rect>
-           <x>200</x>
+           <x>40</x>
            <y>40</y>
-           <width>21</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>...</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButtonConnectDisconnect">
-         <property name="geometry">
-          <rect>
-           <x>230</x>
-           <y>10</y>
            <width>101</width>
            <height>21</height>
           </rect>
          </property>
          <property name="text">
-          <string>Connect</string>
+          <string>Listen</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="pushButtonListenClose">
          <property name="geometry">
           <rect>
-           <x>230</x>
+           <x>150</x>
            <y>40</y>
            <width>101</width>
            <height>21</height>
@@ -140,7 +91,7 @@
         <widget class="QPushButton" name="pushButton_5">
          <property name="geometry">
           <rect>
-           <x>340</x>
+           <x>260</x>
            <y>10</y>
            <width>21</width>
            <height>21</height>
@@ -153,7 +104,7 @@
         <widget class="QPushButton" name="pushButton_6">
          <property name="geometry">
           <rect>
-           <x>340</x>
+           <x>260</x>
            <y>40</y>
            <width>21</width>
            <height>21</height>
@@ -166,9 +117,9 @@
         <widget class="QLabel" name="label_3">
          <property name="geometry">
           <rect>
-           <x>380</x>
+           <x>290</x>
            <y>10</y>
-           <width>51</width>
+           <width>181</width>
            <height>51</height>
           </rect>
          </property>
