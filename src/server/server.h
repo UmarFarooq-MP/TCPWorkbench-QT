@@ -6,7 +6,8 @@ class Server: public QTcpServer {
 
     QTcpServer m_server;
 public:
-    Server() = default;
+    Server();
     void listen(const uint16_t port);
     void stopListening();
+    void hasNewConnection();
 };
